@@ -1,0 +1,18 @@
+Plex Media Player Standalone Service
+====================================
+
+This repo contains a service file to start up the Plex Media Player via SystemD automatically at system boot up.
+
+Dependency List
+---------------
+
+ * polkit
+ * systemd
+ * xorg-server with xinit
+
+Acknowledgement
+---------------
+
+The PMP standalone service is based upon the [Kodi Standalone service](https://github.com/graysky2/kodi-standalone-service)
+by graysky <graysky AT archlinux DOT us>, many thanks to graysky. Additionally, I'd like to thank the maintainers of
+the [Plex Media Player AUR](https://aur.archlinux.org/packages/plex-media-player/) package for their work.

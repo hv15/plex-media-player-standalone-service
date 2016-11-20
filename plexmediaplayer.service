@@ -1,0 +1,17 @@
+[Unit]
+Description = Starts an instance of Plex Media Player using xinit
+After = systemd-user-sessions.service network.target sound.target
+Conflicts = getty@tty7.service
+
+[Service]
+User = plex
+Group = plex
+PAMName = login
+Type = simple
+TTYPath = /dev/tty7
+ExecStart = /usr/bin/xinit /usr/bin/plexmediaplayer -- :0 -nolisten tcp vt7
+Restart = on-success
+StandardInput = tty
+
+[Install]
+WantedBy = multi-user.target
